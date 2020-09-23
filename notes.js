@@ -60,3 +60,10 @@ function determineFruit(taste, color){
 Thisfruit = determineFruit("sweet", "red");
 console.log(Thisfruit + ", sweet~!"); 
 
+/*  Import & Export code
+module.exports = functionName();
+var package = require("./package.js");      
+    add ./ meaning anywhere in the same directory,
+    used for modules created by third-parties other than node.js
+*/
+

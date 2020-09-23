@@ -9,10 +9,25 @@ function addFavoriteMovie(movieName) {
 
 //print the list of movies
 function printFavoriteMovie() {
-    console.log ("Favorite Movies: .." + "(" + favoriteMovies.length + " movies total)");
+    console.log (`Favorite Movies: ..(${favoriteMovies.length} movies total)`);
     for (i in favoriteMovies){
         console.log(favoriteMovies[i]);
     }
+    /* 
+    for (i of favoriteMovies) {
+        console.log(favoriteMovies[i]);
+    }
+    var i = 0;
+    while (i < favoriteMovies.length){
+        console.log(favortieMovies[i]);
+        i = i + 1; // i++;
+    }
+    
+    var i = 0;
+    for (var i = 0, i < favoriteMovies.length, i++){
+        console.log(favoriteMovies[i]);
+    }
+    */
 }
 
 addFavoriteMovie("Ham");
