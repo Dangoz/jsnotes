@@ -21,7 +21,7 @@ function getDayOfTheWeek(year, month, day) {
     } else {
         mCode = monthCode[month];
     }
-    if (year >= 1600 & year < 1700) {
+    if (year >= 1600 && year < 1700) {
         mCode += 6;
     } else if (year >= 1700 && year < 1800) {
         mCode += 4;
