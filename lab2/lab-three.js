@@ -19,7 +19,7 @@ function getDayOfTheWeek(year, month, day) {
   let fours = Math.floor(remainder / 4);         
 	let mCode = monthCode[month];
 
-  //special offsets regarding step 5
+  // special offsets according to step 5
   if (isLeapYear(year) && (month == 1 || month == 2)) {
 		mCode -= 1;
 	}
@@ -41,7 +41,7 @@ function getDayOfTheWeek(year, month, day) {
 	return weekDay;
 }
 
-//return if a year is a leap year
+// return if a year is a leap year
 function isLeapYear(year) {
   if (year % 4 != 0) {
     return false;
@@ -54,7 +54,7 @@ function isLeapYear(year) {
   }
 }
 
-//print out date and day of the week, for year 2020 (leap year)
+// print out each date and day of the week, for year 2020 (leap year)
 function makeCalender() {
   let dayTrack = 1;
   let monthTrack = 1;
