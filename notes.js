@@ -67,3 +67,52 @@ var package = require("./package.js");
     used for modules created by third-parties other than node.js
 */
 
+var uniExample = "coffee\u0301"; //unicode example with u+0301
+uniExample.length; // return 7
+uniExample.normalize().length; // return 6
+var emoExample = "😄";
+var emoExample2 = [..."😄"];
+emoExample.length; //return 2       
+emoExample2.length; //return 1;
+
+//common array operations
+let fruits = ["Apple", "Orange", "Watermelon", "Peach"];
+fruits.pop(); //remove last value, can store in variable
+fruits.shift(); //remove first value, can store in variable
+fruits.unshift(); //add value to front of a list
+fruits.push(); //add value to end of a list
+
+//do while loop
+var int = 0;
+do {
+    int += 1;
+    //console.log(int);
+} while (int < 10);
+
+//obj
+let obj = {"fruitName":"Watermelon", 
+           "fruitColor": {
+                "color1" : "red",
+                "color2" : "blue",
+                "color3" : "green",
+            },
+            "fruitTaste": ["Sweet"]
+        }
+obj.fruitTaste.push("sour");
+for (i in obj) {
+    console.log(obj[i]);
+}
+console.log(obj.hasOwnProperty("fruitColor"));
+//object destructuring
+
+//use Let
+var apple = "apple";
+console.log(window.apple); //return apple
+let peach = "peach";
+console.log(window.peach); //return undefined
+
+
+
+
+
+
