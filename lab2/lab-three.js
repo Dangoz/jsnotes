@@ -2,7 +2,7 @@
 const monthCode = { 1: 1, 2: 4, 3: 4, 4: 0, 5: 2, 6: 5, 
                     7: 0, 8: 3, 9: 6, 10: 1, 11: 4, 12: 6 };
 const weekCode = { 2: "Monday", 3: "Tuesday", 4: "Wednesday", 5: "Thursday", 
-                   6: "Friday", 0: "Saturday", 1: "Sunday" }
+                   6: "Friday", 0: "Saturday", 1: "Sunday" };
 const maxDayPerMonth = { 1: 31, 2: 29, 3: 31, 4: 30, 5: 31, 6: 30, 
                          7: 31, 8: 31, 9: 30, 10: 31, 11: 30, 12: 31 };
 
