@@ -13,7 +13,7 @@ const maxDayPerMonth = { 1: 31, 2: 29, 3: 31, 4: 30, 5: 31, 6: 30,
  */
 function getDayOfTheWeek(year, month, day) {
   // last two digits of year 
-	let yearl2 = year % 100; 
+  let yearl2 = year % 100; 
   let remainder = yearl2 % 12;                      
   let twelves = Math.floor(yearl2 / 12);
   let fours = Math.floor(remainder / 4);         
