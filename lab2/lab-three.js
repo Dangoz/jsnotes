@@ -16,15 +16,15 @@ function getDayOfTheWeek(year, month, day) {
   let yearl2 = year % 100; 
   let remainder = yearl2 % 12;                      
   let twelves = Math.floor(yearl2 / 12);
-  let fours = Math.floor(remainder / 4);         
-	let mCode = monthCode[month];
+  let fours = Math.floor(remainder / 4);
+  let mCode = monthCode[month];
 
   // special offsets according to step 5
   if (isLeapYear(year) && (month == 1 || month == 2)) {
-		mCode -= 1;
-	}
+    mCode -= 1;
+  }
   if (year >= 1600 && year < 1700) {
-		mCode += 6;
+    mCode += 6;
   } else if (year >= 1700 && year < 1800) {
     mCode += 4;
   } else if (year >= 1800 && year < 1900) {
@@ -38,7 +38,7 @@ function getDayOfTheWeek(year, month, day) {
   // sum according to step 6
   let sum = (twelves + fours + remainder + day + mCode) % 7;
   let weekDay = weekCode[sum];
-	return weekDay;
+  return weekDay;
 }
 
 // return if a year is a leap year
@@ -50,7 +50,7 @@ function isLeapYear(year) {
   } else if (year % 400 != 0) {
     return false;
   } else {
-  	return true;
+    return true;
   }
 }
 
@@ -58,17 +58,17 @@ function isLeapYear(year) {
 function makeCalender() {
   let dayTrack = 1;
   let monthTrack = 1;
-	let weekDay;
+  let weekDay;
 
   for (let i = 0; i < 366; i++) {
-  	weekDay = getDayOfTheWeek(2020, monthTrack, dayTrack);
-		console.log(dayTrack + "-" + monthTrack + 
-								"-2020 is a " + weekDay);
-		if (dayTrack == maxDayPerMonth[monthTrack]) {
-    	dayTrack = 1;
-    	monthTrack += 1;
+    weekDay = getDayOfTheWeek(2020, monthTrack, dayTrack);
+    console.log(dayTrack + "-" + monthTrack + 
+                "-2020 is a " + weekDay);
+    if (dayTrack == maxDayPerMonth[monthTrack]) {
+      dayTrack = 1;
+      monthTrack += 1;
     } else {
-    	dayTrack += 1;
+      dayTrack += 1;
     }
   }
 }
