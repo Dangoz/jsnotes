@@ -103,7 +103,10 @@ for (i in obj) {
     console.log(obj[i]);
 }
 console.log(obj.hasOwnProperty("fruitColor"));
+
 //object destructuring
+let person = { personOne: "Jason", personTwo: "Jack" };
+let { personOne, personTwo } = person;
 
 //use Let
 var apple = "apple";
